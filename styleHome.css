@@ -1,0 +1,31 @@
+body {
+  background-color: #cbb9c5;
+  font-family: "Dancing Script", cursive;
+}
+.caja {
+  width: 1000px;
+  position: center;
+  margin: 0 auto;
+}
+nav {
+  position: center;
+  top: 110px;
+}
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 23px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #243a74;
+  text-decoration: underline;
+}
+.menu {
+  background: #d23baf;
+}

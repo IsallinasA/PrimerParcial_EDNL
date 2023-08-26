@@ -1,0 +1,69 @@
+body {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem;
+  background-color: #cbb9c5;
+}
+
+#grafica {
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 50px;
+}
+
+button,
+select,
+input {
+  background-color: #7e1a7c;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 300rem;
+  color: white;
+  font-family: "Dancing Script", cursive;
+}
+button:hover {
+  background-color: #d23baf;
+}
+
+.caja {
+  width: 1000px;
+  position: center;
+  margin: 0 auto;
+}
+nav {
+  position: center;
+  top: 110px;
+  right: 0;
+}
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 23px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #243a74;
+  text-decoration: underline;
+}
+.menu {
+  background: #d23baf;
+}
