@@ -66,4 +66,18 @@ nav a:hover {
 }
 .menu {
   background: #d23baf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
 }

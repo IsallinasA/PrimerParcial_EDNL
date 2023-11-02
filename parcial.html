@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Graficadora de Grafos</title>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+
+    <link rel="stylesheet" href="parcial.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mooli&display=swap"
+      rel="stylesheet"
+    />
+    <script src="parcial.js"></script>
+  </head>
+
+  <body style="background-color: #cbb9c5">
+    <header>
+      <div class="caja">
+        <nav>
+          <ul class="menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="parcial.html">Grafos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div style="display: flex; justify-content: space-between">
+      <div>
+        <div class="buttons-left">
+          <input id="addNode" type="text" placeholder="Nombre" />
+          <button onclick="graph.addNewNode()" class="button">
+            Agregar Nodo
+          </button>
+        </div>
+        <div class="buttons-left">
+          <input id="actualNodeName" type="text" placeholder="Antiguo nombre" />
+          <input id="newNodeName" type="text" placeholder="Nuevo nombre" />
+          <button onclick="editNode()" class="button">Editar Nodo</button>
+        </div>
+        <div class="buttons-left">
+          <input id="deleteNode" type="text" placeholder="Nombre" />
+          <button onclick="deleteNode()" class="button">Eliminar Nodo</button>
+        </div>
+      </div>
+      <div>
+        <div class="buttons-left">
+          <input id="addNodeName1" type="text" placeholder="Origen" />
+          <input id="addNodeName2" type="text" placeholder="Destino" />
+          <input id="addWeight" type="text" placeholder="Peso" />
+          <button onclick="graph.addNewEdge()" class="button">
+            Agregar Relación
+          </button>
+        </div>
+        <div class="buttons-left">
+          <input id="editNodeName1" type="text" placeholder="Origen" />
+          <input id="editNodeName2" type="text" placeholder="Destino" />
+          <input id="editWeight" type="text" placeholder="Nuevo Peso" />
+          <button onclick="editEdge()" class="button">Editar Relación</button>
+        </div>
+        <div class="buttons-left">
+          <input id="deleteRelationNode1" type="text" placeholder="Origen" />
+          <input id="deleteRelationNode2" type="text" placeholder="Destino" />
+          <button onclick="editEdge()" class="button">Eliminar Relación</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <button onclick="saveGraph()" class="button">Guardar Grafo</button>
+    <button onclick="highlightLongestPath()">Mostrar ruta crítica</button>
+    <button onclick="highlightShortestPath()" id="shortestPath">
+      Mostrar camino más corto
+    </button>
+    <input type="file" id="fileInput" class="load-graph-choose-button" />
+    <button onclick="loadGraph()" id="load-graph-button">Cargar Grafo</button>
+
+    <button onclick="showAdjacencyMatrix()" id="showAdjacencyMatrix">
+      Mostrar Matriz de Adyacencia
+    </button>
+    <button onclick="showIncidenceMatrix()" id="showIncidenceMatrix">
+      Mostrar matriz de incidencia
+    </button>
+
+    <div id="adjacencyMatrix"></div>
+
+    <div id="mynetwork"></div>
+  </body>
+</html>
